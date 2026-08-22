@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="/">Minha <span>Loja</span></a>
+
+        <nav class="nav">
+            <a class="{{#menu.home}}active{{/menu.home}}" href="#">Início</a>
+            <a class="{{#menu.product}}active{{/menu.product}}" href="#produtos">Produtos</a>
+            <a class="{{#menu.category}}active{{/menu.category}}" href="#categorias">Categorias</a>
+            <a class="{{#menu.sobre}}active{{/menu.sobre}}" href="#sobre">Sobre</a>
+        </nav>
+
+        <div class="header-actions">
+            <input type="search" placeholder="Buscar produtos...">
+            <button class="cart" aria-label="Carrinho">🛒<span>0</span></button>
+        </div>
+    </header>

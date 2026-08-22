@@ -1,0 +1,85 @@
+{{>partials/header}}
+
+    <main>
+        <section class="hero">
+            <img src="./images/hero.jpg" alt="">
+            <div class="hero-content">
+                <p class="eyebrow">MINHA LOJA</p>
+                <h1>Catálogo de Produtos</h1>
+                <p>Encontre os melhores produtos com os melhores preços.</p>
+                <a class="button" href="#produtos">Ver produtos →</a>
+            </div>
+        </section>
+
+        <section id="categorias" class="section">
+            <h2>Categorias</h2>
+            <div class="categories">
+                <button>🖥️ <strong>Informática</strong><small>12 produtos</small></button>
+                <button>🎧 <strong>Áudio</strong><small>8 produtos</small></button>
+                <button>📱 <strong>Celulares</strong><small>6 produtos</small></button>
+                <button>🎮 <strong>Games</strong><small>9 produtos</small></button>
+                <button>••• <strong>Outros</strong><small>5 produtos</small></button>
+            </div>
+        </section>
+
+        <section id="produtos" class="section">
+            <div class="section-title">
+                <h2>Produtos em destaque</h2>
+                <a href="#">Ver todos →</a>
+            </div>
+
+            <div class="products">
+                <article class="card">
+                    <img src="./images/teclado.jpg" alt="Teclado mecânico RGB">
+                    <div class="card-body">
+                        <h3>Teclado Mecânico RGB</h3>
+                        <small>Informática</small>
+                        <strong>R$ 299,90</strong>
+                        <button>Ver detalhes</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="./images/mouse.jpg" alt="Mouse sem fio">
+                    <div class="card-body">
+                        <h3>Mouse Sem Fio</h3>
+                        <small>Informática</small>
+                        <strong>R$ 89,90</strong>
+                        <button>Ver detalhes</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="./images/headset.jpg" alt="Headset gamer">
+                    <div class="card-body">
+                        <h3>Headset Gamer</h3>
+                        <small>Áudio</small>
+                        <strong>R$ 199,90</strong>
+                        <button>Ver detalhes</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="./images/smartphone.jpg" alt="Smartphone">
+                    <div class="card-body">
+                        <h3>Smartphone XYZ</h3>
+                        <small>Celulares</small>
+                        <strong>R$ 2.499,90</strong>
+                        <button>Ver detalhes</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="./images/controle.jpg" alt="Controle wireless">
+                    <div class="card-body">
+                        <h3>Controle Wireless</h3>
+                        <small>Games</small>
+                        <strong>R$ 249,90</strong>
+                        <button>Ver detalhes</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    {{>partials/footer}}
