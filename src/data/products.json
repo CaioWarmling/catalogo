@@ -1,0 +1,33 @@
+[
+    {
+        "nome": "Teclado Mecanico",
+        "preco": 280.50,
+        "categoria": "periférico",
+        "imagem": "teclado.jpg"
+    },
+    {
+        "nome": "Iphone 17",
+        "preco": 3999.99,
+        "categoria": "celular",
+        "imagem": "smartphone.jpg"
+    },
+    {
+        "nome": "Mouse Gamer",
+        "preco": 230.50,
+        "categoria": "periférico",
+        "imagem": "mouse.jpg"
+    },
+    {
+        "nome": "Headset Redragon",
+        "preco": 380.50,
+        "categoria": "periférico",
+        "imagem": "headset.jpg"
+    },
+    {
+        "nome": "Controle Mancer",
+        "preco": 240.50,
+        "categoria": "periférico",
+        "imagem": "controle.jpg"
+    }
+
+]
