@@ -13,7 +13,8 @@ export const home = async (req: Request, res: Response) => {
         banner: {
             background: 'hero.jpg'
         },
-        ler
+        ler,
+        categoria: true
     });
 }
 
@@ -23,20 +24,39 @@ export const product = async (req: Request, res: Response) => {
     res.render('pages/page', {
         menu: createMenuObject('product'),
         banner: false,
-        ler
+        ler,
+        categoria: false
+    })
+}
+
+export const productDetail = async (req: Request, res: Response) => {
+    const ler = await lerArquivo(caminho)
+
+    const id = Number(req.params.id);
+
+    const produtos = ler.find(produto => produto.id === id)
+    
+    res.render('pages/productDetail', {
+        menu: createMenuObject('product'),
+        banner: false,
+        ler,
+        produto: produtos,
+        categoria: false
     })
 }
 
 export const category = (req: Request, res: Response) => {
     res.render('pages/page', {
         menu: createMenuObject('category'),
-        banner: false
+        banner: false,
+        categoria: true
     })
 }
 
 export const sobre = (req: Request, res: Response) => {
     res.render('pages/page', {
         menu: createMenuObject('sobre'),
-        banner: false
+        banner: false,
+        categoria: false
     })
 }

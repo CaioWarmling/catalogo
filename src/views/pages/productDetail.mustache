@@ -1,0 +1,41 @@
+{{>partials/header}}
+
+<main class="product-detail">
+
+    <div class="product-detail__container">
+
+        <div class="product-detail__image">
+            <img src="/images/{{produto.imagem}}" alt="{{produto.nome}}">
+        </div>
+
+        <div class="product-detail__info">
+
+            <span class="product-detail__category">
+                {{produto.categoria}}
+            </span>
+
+            <h1>{{produto.nome}}</h1>
+
+            <p class="product-detail__price">
+                {{produto.preco}}
+            </p>
+
+            <p class="product-detail__description">
+                Confira todos os detalhes deste produto.
+            </p>
+
+            <button class="product-detail__button">
+                Adicionar ao carrinho
+            </button>
+
+            <a href="/products" class="product-detail__back">
+                ← Voltar para produtos
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+{{>partials/footer}}

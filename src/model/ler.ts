@@ -1,6 +1,7 @@
 import { readFile} from "fs/promises";
 
 interface Produto {
+    id: number,
     nome: string,
     preco: number,
     categoria: string,
