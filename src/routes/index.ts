@@ -7,7 +7,8 @@ router.get('/', pageController.home);
 router.get('/products', pageController.product);
 router.get('/category', pageController.category);
 router.get('/sobre', pageController.sobre);
-router.get('/products/:id', pageController.productDetail)
+router.get('/products/:id', pageController.productDetail);
+router.get('/category/:categoria', pageController.categoryFind)
 
 
 

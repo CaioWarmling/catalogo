@@ -16,11 +16,11 @@
         <section id="categorias" class="section">
             <h2>Categorias</h2>
             <div class="categories">
-                <button>🖥️ <strong>Informática</strong><small>12 produtos</small></button>
-                <button>🎧 <strong>Áudio</strong><small>8 produtos</small></button>
-                <button>📱 <strong>Celulares</strong><small>6 produtos</small></button>
-                <button>🎮 <strong>Games</strong><small>9 produtos</small></button>
-                <button>••• <strong>Outros</strong><small>5 produtos</small></button>
+                <a href="/category/periférico">🖥️ <strong>Informática</strong><small>12 produtos</small></a>
+                <a href="/category/fone">🎧 <strong>Áudio</strong><small>8 produtos</small></a>
+                <a href="/category/celular"> 📱 <strong>Celulares</strong><small>1 produtos</small> </a>
+                <a href="/category/games">🎮 <strong>Games</strong><small>9 produtos</small></a>
+                <a href="/category/periférico">••• <strong>Outros</strong><small>5 produtos</small></a>
             </div>
         </section>
     {{/categoria}}
@@ -33,12 +33,14 @@
                 <a href="/products">Ver todos →</a>
             </div>
 
+            <h1>{{produto}}</h1>
+
             
             <div class="products">
                 {{#ler}}
                     <a href="/products/{{id}}" class="product-link">
                         <article class="card">
-                            <img src="./images/{{imagem}}" alt="Teclado mecânico RGB">
+                            <img src="/images/{{imagem}}" alt="Teclado mecânico RGB">
                             <div class="card-body">
                                 <h3>{{nome}}</h3>
                                 <small>{{categoria}}</small>

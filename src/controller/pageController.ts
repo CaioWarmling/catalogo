@@ -35,6 +35,12 @@ export const productDetail = async (req: Request, res: Response) => {
     const id = Number(req.params.id);
 
     const produtos = ler.find(produto => produto.id === id)
+
+    if(produtos === undefined) {
+        return res.status(404).render('pages/page', {
+            produto: 'Produto não encontrado!'
+        })
+    }
     
     res.render('pages/productDetail', {
         menu: createMenuObject('product'),
@@ -50,6 +56,27 @@ export const category = (req: Request, res: Response) => {
         menu: createMenuObject('category'),
         banner: false,
         categoria: true
+    })
+}
+
+export const categoryFind = async (req: Request, res: Response) => {
+     const ler = await lerArquivo(caminho);
+    
+    const id = req.params.categoria;
+
+    if(typeof id !== "string") {
+        return res.status(404).render('pages/page', {
+            produto: 'categoria não encontrada!'
+        })
+    }
+
+    const category = ler.filter(item => item.categoria.includes(id))
+
+    res.render('pages/page', {
+        menu: createMenuObject('category'),
+        banner: false,
+        ler: category,
+        categoria: false,
     })
 }
 

@@ -176,7 +176,7 @@ main {
     gap: 18px;
 }
 
-.categories button {
+.categories a {
     min-height: 82px;
     background: white;
     border: 1px solid #e8eaed;
