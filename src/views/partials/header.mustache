@@ -18,7 +18,9 @@
         </nav>
 
         <div class="header-actions">
-            <input type="search" placeholder="Buscar produtos...">
+        <form method="GET" action="/search">
+            <input type="search" placeholder="Buscar produtos..." value="{{id}}" name="q">
+        </form>
             <button class="cart" aria-label="Carrinho">🛒<span>0</span></button>
         </div>
     </header>

@@ -70,7 +70,8 @@ export const categoryFind = async (req: Request, res: Response) => {
         })
     }
 
-    const category = ler.filter(item => item.categoria.includes(id))
+
+    const category = ler.filter(item => item.categoria?.includes(id))
 
     res.render('pages/page', {
         menu: createMenuObject('category'),
