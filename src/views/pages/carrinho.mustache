@@ -1,0 +1,127 @@
+{{>partials/header}}
+
+<main class="cart-page">
+
+    <div class="cart-header">
+        <div>
+            <span class="cart-eyebrow">MINHA LOJA</span>
+            <h1>Seu carrinho</h1>
+            <p>Confira os produtos antes de finalizar sua compra.</p>
+        </div>
+
+        <a href="/products" class="cart-continue">
+            ← Continuar comprando
+        </a>
+    </div>
+
+
+    <div class="cart-layout">
+
+        <section class="cart-products">
+
+            <div class="cart-products__title">
+                <h2>Produtos</h2>
+            </div>
+
+
+            {{#carrinho}}
+
+                <article class="cart-item">
+
+                    <div class="cart-item__image">
+                        <img src="/images/{{imagem}}" alt="{{nome}}">
+                    </div>
+
+                    <div class="cart-item__info">
+                        <small>Produto</small>
+                        <h3>{{nome}}</h3>
+                        <span>{{categoriaPrincipal}}</span>
+                    </div>
+
+                    <div class="cart-item__price">
+                        <small>Preço</small>
+                        <strong>{{preco}}</strong>
+                    </div>
+
+                    <button class="cart-item__remove">
+                        Remover
+                    </button>
+
+                </article>
+
+            {{/carrinho}}
+
+
+            {{^carrinho}}
+
+                <div class="cart-empty">
+                    <div class="cart-empty__icon">🛒</div>
+
+                    <h2>Seu carrinho está vazio</h2>
+
+                    <p>
+                        Você ainda não adicionou nenhum produto ao carrinho.
+                    </p>
+
+                    <a href="/products">
+                        Ver produtos
+                    </a>
+                </div>
+
+            {{/carrinho}}
+
+        </section>
+
+
+        <aside class="cart-summary">
+
+            <h2>Resumo do pedido</h2>
+
+            <div class="cart-summary__line">
+                <span>Subtotal</span>
+
+                <strong>
+                    {{#total}}
+                        {{total}}
+                    {{/total}}
+
+                    {{^total}}
+                        R$ 0,00
+                    {{/total}}
+                </strong>
+            </div>
+
+            <div class="cart-summary__line">
+                <span>Frete</span>
+                <span>Calculado depois</span>
+            </div>
+
+            <div class="cart-summary__total">
+                <span>Total</span>
+
+                <strong>
+                    {{#total}}
+                        {{total}}
+                    {{/total}}
+
+                    {{^total}}
+                        R$ 0,00
+                    {{/total}}
+                </strong>
+            </div>
+
+            <button class="cart-checkout">
+                Finalizar compra
+            </button>
+
+            <p class="cart-summary__safe">
+                🔒 Compra segura
+            </p>
+
+        </aside>
+
+    </div>
+
+</main>
+
+{{>partials/footer}}

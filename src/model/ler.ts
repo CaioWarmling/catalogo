@@ -1,12 +1,12 @@
 import { readFile} from "fs/promises";
 
-interface Produto {
-    id: number,
-    nome: string,
-    preco: number,
-    categoria: string[],
-    imagem: string
-}
+export interface Produto {
+        id: number,
+        nome: string,
+        preco: number,
+        categoria: string[],
+        imagem: string
+    }
 
 export async function lerArquivo(caminho: string) {
     const ler = await readFile(caminho, {encoding:'utf8'});
