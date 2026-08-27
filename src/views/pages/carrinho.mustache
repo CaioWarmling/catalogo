@@ -40,13 +40,15 @@
 
                     <div class="cart-item__price">
                         <small>Preço</small>
-                        <strong>{{preco}}</strong>
+                        <strong>{{precoFormatado}}</strong>
                     </div>
 
-                    <button class="cart-item__remove">
-                        Remover
-                    </button>
-
+                    <form method="POST" action="/carrinho/remove/{{id}}">
+                        <button class="cart-item__remove" >
+                            Remover
+                        </button>
+                    </form>
+                    
                 </article>
 
             {{/carrinho}}

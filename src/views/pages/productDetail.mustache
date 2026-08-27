@@ -17,16 +17,18 @@
             <h1>{{produto.nome}}</h1>
 
             <p class="product-detail__price">
-                {{produto.preco}}
+                {{produto.precoFormatado}}
             </p>
 
             <p class="product-detail__description">
                 Confira todos os detalhes deste produto.
             </p>
 
-            <button class="product-detail__button">
-                Adicionar ao carrinho
-            </button>
+            <form method="POST" action="/carrinho/{{produto.id}}">
+                <button class="product-detail__button" type="submit">
+                    Adicionar ao carrinho
+                </button>
+            </form>
 
             <a href="/products" class="product-detail__back">
                 ← Voltar para produtos

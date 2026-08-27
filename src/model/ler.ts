@@ -14,7 +14,7 @@ export async function lerArquivo(caminho: string) {
 
     return produtos.map((produto) => ({
         ...produto,
-        preco: new Intl.NumberFormat('pt-BR', {
+        precoFormatado: new Intl.NumberFormat('pt-BR', {
             style: 'currency',
             currency: 'BRL'
         }).format(produto.preco)

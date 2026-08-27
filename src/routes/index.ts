@@ -13,6 +13,8 @@ router.get('/products/:id', pageController.productDetail);
 router.get('/category/:categoria', pageController.categoryFind);
 router.get('/search', searchController.searchProduct);
 router.get('/carrinho', carrinhoController.carrinho);
+router.post('/carrinho/:id', carrinhoController.carrinhoTotal)
+router.post('/carrinho/remove/:id', carrinhoController.carrinhoRemove)
 
 
 
